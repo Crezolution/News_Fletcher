@@ -18,7 +18,7 @@ def getarticals(url):
        response = requests.get(url)
        try:
               articles= response.json()['articles']
-              for i,all in enumerate(articles):
+              for i,_ in enumerate(articles):
                      title= response.json()['articles'][i]['title']
                      author= response.json()['articles'][i]['author']
                      description= response.json()['articles'][i]['description']
@@ -27,7 +27,7 @@ def getarticals(url):
                      time.sleep(.10)
        except:
               sources= response.json()['sources']
-              for i,all in enumerate(sources):
+              for i,_ in enumerate(sources):
                      name= response.json()['sources'][i]['name']
                      description= response.json()['sources'][i]['description']
                      url= response.json()['sources'][i]['url']
